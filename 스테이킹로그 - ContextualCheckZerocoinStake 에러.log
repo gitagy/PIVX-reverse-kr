@@ -1,0 +1,68 @@
+
+2018-05-22 00:27:57 UpdateTip: new best=dd38a585366686de543bd1f54e997b119aef237c884e7ccb0200d9043f8456e8  height=1172804  log2_work=69.070729  tx=2585453  date=2018-05-22 00:28:16 progress=1.000001  cache=2147
+2018-05-22 00:27:57 ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+2018-05-22 00:27:57 ProcessNewBlock : ACCEPTED Block 1172804 in 1461 milliseconds with size=20674
+
+2018-05-22 00:29:20 CreateCoinStake : kernel found
+2018-05-22 00:30:19 MintToTxIn: privatecoin version=2
+2018-05-22 00:30:19 CoinSpend: version=2 signatureHash=9fc5602ca02f3bf4dae769d66beed9af6950474b37f74d2886bcdbc166b9a6b9 spendtype=1
+
+2018-05-22 00:30:21 CreateNewBlock(): total size 1311
+
+2018-05-22 00:30:24 AddToWallet() : found d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe in block 1d0113af46bff449b428f2913e4e8088ecee5197425c55c58bca2ab74f6ce13d not in index
+2018-05-22 00:30:24 AddToWallet d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe  new
+
+2018-05-22 00:30:24 CPUMiner : proof-of-stake block found 029eb5621a26d097a61a57a878f20d37e5a46db398cdf05d5bf40b517c5740cd
+2018-05-22 00:30:25 CPUMiner : proof-of-stake block was signed 029eb5621a26d097a61a57a878f20d37e5a46db398cdf05d5bf40b517c5740cd
+
+2018-05-22 00:30:25 CBlock(hash=029eb5621a26d097a61a57a878f20d37e5a46db398cdf05d5bf40b517c5740cd, ver=4, hashPrevBlock=dd38a585366686de543bd1f54e997b119aef237c884e7ccb0200d9043f8456e8, hashMerkleRoot=c2f91bec7481dd73d1ded334ec3204bb08f65f6dba0f23e3e8b35e68afc190dd, nTime=1526948971, nBits=1a6bdf13, nNonce=0, vtx=3)
+                    CTransaction(hash=ed165e6ce7, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 0345e5110101)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                    CTransaction(hash=d7b5a432a9, ver=1, vin.size=1, vout.size=6, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), zerocoinspend c202af5be8030000834f044e3..., nSequence=1000)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                        CTxOut(nValue=1000.00000000, scriptPubKey=OP_ZEROCOINMINT 128 eba8ec6603)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 6bf4108b78)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 1bd75ca03e)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 91becaa792)
+                        CTxOut(nValue=2.00000000, scriptPubKey=OP_DUP OP_HASH160 c882aaa7c3e2)
+                    CTransaction(hash=16856daad5, ver=1, vin.size=1, vout.size=2, nLockTime=0)
+                        CTxIn(COutPoint(d27343953775b57e85f8f42c79dab247babd741d52c934cae6006ff4e0c80401, 1), scriptSig=304502210096b3c7199c0f34)
+                        CTxOut(nValue=5.00000000, scriptPubKey=OP_ZEROCOINMINT 128 110056b294)
+                        CTxOut(nValue=2268.43394084, scriptPubKey=03f5bc70f8206cc066d0d8507b105f)
+                    vMerkleTree:  ed165e6ce77a1243b5b5ed89e0993d8861ef1fbc1135e2931926ed05c9198d4a d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe 16856daad56b7edead5bc56cda579f12418df13e544a1713a34e26716567c2e0 702fc5cd9c537292168a0f449386f8ff89d948d60d2ae59a8d5790da7945ffed e563f2ba4c084f0c15ef445429975a29b4c4fb694baee2cdd8cad98529eb829f c2f91bec7481dd73d1ded334ec3204bb08f65f6dba0f23e3e8b35e68afc190dd
+2018-05-22 00:30:25 generated 0.00
+> 아래에서 stale block 판단 기준 passing
+2018-05-22 00:30:25 keypool keep 148
+
+2018-05-22 00:30:25 ProcessNewBlock : block contains 5 zPIV mints and 1 zPIV spends
+
+2018-05-22 00:30:25 ERROR: ContextualCheckZerocoinStake: accumulator checksum is different than the block 200 blocks previous. stake=3182938563 block200=4107341883
+2018-05-22 00:30:25 ERROR: AcceptBlock: staked zPIV fails context checks
+2018-05-22 00:30:25 ERROR: ProcessNewBlock : AcceptBlock FAILED
+2018-05-22 00:30:25 ERROR: PIVXMiner : ProcessNewBlock, block not accepted
+
+2018-05-22 00:30:25 ProcessNewBlock : block contains 5 zPIV mints and 1 zPIV spends
+
+2018-05-22 00:30:25 keypool added key 1149, size=1001
+2018-05-22 00:30:25 init message: 지갑을 불러오는 중… (114.79 %)
+2018-05-22 00:30:25 keypool reserve 149
+
+2018-05-22 00:30:25 UpdateTip: new best=f6c79926903b2bb3cd018b4c438db624ee1fd854e38b81e27f66fea6eab37dec  height=1172805  log2_work=69.07073  tx=2585456  date=2018-05-22 00:30:25 progress=1.000000  cache=2150
+2018-05-22 00:30:25 ProcessNewBlock : ACCEPTED Block 1172805 in 553 milliseconds with size=21319
+2018-05-22 00:30:26 ProcessNewBlock : block contains 1 zPIV mints and 0 zPIV spends
+
+> 생성 tx 취소 처리
+2018-05-22 00:30:25 UpdateStatusInternal : Failed to find tx for mint txid=d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe
+2018-05-22 00:30:25 Archive: archived pubcoinhash 57364baf5e47e90a6fc2443df555e662ed694841b92b65d8cf71abfd9264f2a9
+2018-05-22 00:30:25 UpdateStatusInternal : Failed to find tx for mint txid=d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe
+2018-05-22 00:30:25 Archive: archived pubcoinhash fdb6e810f14aed1eef1f57c62785014eb96a7d9faf61fd1807ed9723f0ae75fa
+2018-05-22 00:30:25 UpdateStatusInternal : Failed to find tx for mint txid=d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe
+2018-05-22 00:30:25 Archive: archived pubcoinhash 0a99f13f9fbcf047f10f39e1ce8194d895584b58b538fbe596ccdb4d9eff2a71
+2018-05-22 00:30:26 UpdateStatusInternal : Failed to find tx for mint txid=d7b5a432a9d4f303ab8d125098aae31ef1df3960c29b80b5278f0b1c30d85dbe
+2018-05-22 00:30:26 Archive: archived pubcoinhash efa5fe4c44bda6604737262331567ba560571972b1ddf73cb3d7dc09a15d1b23
+2018-05-22 00:30:26 UpdateStatusInternal : Set mint a77c7b6d24b7f9407e7dda44153525a95ae5b617838c9521759da158f0e2f2af isUsed to 0
+
+2018-05-22 00:30:26 UpdateTip: new best=c99b989d8041658a2e142e8f86a7548ad9b6c2eb70f8c93aad10f671e419a209  height=1172806  log2_work=69.070732  tx=2585460  date=2018-05-22 00:30:38 progress=1.000000  cache=2156
+2018-05-22 00:30:26 ProcessNewBlock : ACCEPTED Block 1172806 in 226 milliseconds with size=999

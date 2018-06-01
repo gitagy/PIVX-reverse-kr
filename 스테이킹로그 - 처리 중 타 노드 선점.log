@@ -1,0 +1,86 @@
+
+아래는 경쟁에서 진 경우 인듯, 스테이킹 처리 도중 타 노드가 마이닝 성공 후 노드 전파 까지 진행
+
+
+2018-05-14 14:47:36 CreateCoinStake : kernel found
+2018-05-14 14:48:13 MintToTxIn: privatecoin version=2
+2018-05-14 14:48:14 CoinSpend: version=2 signatureHash=9a3130448c29b86c08fc55ecb4336a166d877463b68623bf6b2b00cd799fd515 spendtype=1
+
+2018-05-14 14:48:16 CreateNewBlock(): total size 1938
+
+2018-05-14 14:48:19 AddToWallet() : found 5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc in block e545a8dd2ac0e9098163ed87fa5d117da7be0ad9fcc60229d5499da5d2d19692 not in index
+2018-05-14 14:48:19 AddToWallet 5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc  new
+
+2018-05-14 14:48:19 CPUMiner : proof-of-stake block found ad9eef98ccc059253c9945ef253d32b3dbe5c0f4fc0567932b7e9fcd51f5c3cf
+2018-05-14 14:48:20 CPUMiner : proof-of-stake block was signed ad9eef98ccc059253c9945ef253d32b3dbe5c0f4fc0567932b7e9fcd51f5c3cf
+
+2018-05-14 14:48:20 CBlock(hash=ad9eef98ccc059253c9945ef253d32b3dbe5c0f4fc0567932b7e9fcd51f5c3cf, ver=4, hashPrevBlock=337d9f20e1c2e1e1e195cc143611f5c7366f4f71e1d9dbf9bd6c743608290f26, hashMerkleRoot=f1c766b1e7797475cc7db6
+                    CTransaction(hash=7cf2cc9511, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 03dfbb110101)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                    CTransaction(hash=5d6075c292, ver=1, vin.size=1, vout.size=6, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), zerocoinspend c2023e57e80300006c23917f6..., nSequence=1000)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                        CTxOut(nValue=1000.00000000, scriptPubKey=OP_ZEROCOINMINT 129 1da2399626)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 89aa62c5d6)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 1f3d049246)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 37212fb73c)
+                        CTxOut(nValue=2.00000000, scriptPubKey=OP_DUP OP_HASH160 f14bdef163b0)
+                    CTransaction(hash=a17a8b7fc5, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+                        CTxIn(COutPoint(22321771a3f24fcffd647082db67ba53b3c802d3d610acc4c3d2e02ebbaccf37, 2), scriptSig=3045022100b242c77520fd38)
+                        CTxOut(nValue=100.00000000, scriptPubKey=OP_DUP OP_HASH160 7ffa36dccf2a)
+                    CTransaction(hash=e67895e751, ver=1, vin.size=3, vout.size=2, nLockTime=0)
+                        CTxIn(COutPoint(b8ddab17f0e44013d585dbc30ebeb963584057c7b50c361caa3ddb0d67742206, 0), scriptSig=3044022100d63a53461dd004)
+                        CTxIn(COutPoint(69a0b47de9c35d29f4553e7239e69afe70a70aca4f2d4357b67a5892f0a2a518, 1), scriptSig=3045022100fb0dcb7ba55d2a)
+                        CTxIn(COutPoint(847f749ec060ba12a075f19f6abac1d7988d33fe06f22e5a310a47d9adf2a1c7, 1), scriptSig=3044022046e4ab3a7407f6cd)
+                        CTxOut(nValue=0.01324351, scriptPubKey=OP_DUP OP_HASH160 9bb9cec5821d)
+                        CTxOut(nValue=100.00000000, scriptPubKey=OP_DUP OP_HASH160 a56ea245bec2)
+                    CTransaction(hash=dc78945f6e, ver=1, vin.size=1, vout.size=2, nLockTime=0)
+                        CTxIn(COutPoint(ea3bc4fdfce0c5ae7a181dc12cc4f522391bf198bedc15f22a4e68d046b6905e, 1), scriptSig=3045022100afd918a538bfc5)
+                        CTxOut(nValue=69.99000000, scriptPubKey=OP_DUP OP_HASH160 51d65a47f26b)
+                        CTxOut(nValue=340.53749286, scriptPubKey=OP_DUP OP_HASH160 b17ae9d45632)
+                    vMerkleTree:  7cf2cc9511fe011fc600067ba318ab05f48dc12e0002211701fb276dbd29ab08 5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc a17a8b7fc52493f7514e13c42098976eacb33b4d654e1896ba16ac1bf4eead47 e67895e7511
+2018-05-14 14:48:20 generated 0.00
+> 아래에서 stale block 판단 기준 passing
+2018-05-14 14:48:20 keypool keep 139
+
+2018-05-14 14:48:21 ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+
+> 이게 경쟁에서 진 거 인듯, 1162207 height 가 다른노드에서 먼저 들어옴.
+> 내꺼 ad9eef98ccc059253c9945ef253d32b3dbe5c0f4fc0567932b7e9fcd51f5c3cf
+> 승자 9a83cb652258be0153194c0958a810577c9605696156a290d231fced7a7bac7e
+
+(승자) 2018-05-14 14:48:21 UpdateTip: new best=9a83cb652258be0153194c0958a810577c9605696156a290d231fced7a7bac7e  height=1162207  log2_work=69.058176  tx=2557520  date=2018-05-14 14:48:11 progress=1.000000  cache=2176
+(내꺼) 2018-05-14 14:48:21 ProcessNewBlock : ACCEPTED Block 1162207 in 1681 milliseconds with size=22426
+
+(승자) 2018-05-14 14:48:22 ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+(승자) 2018-05-14 14:48:22 ProcessNewBlock : ACCEPTED Block 1162207 in 1534 milliseconds with size=24198
+
+2018-05-14 14:48:22 keypool added key 1140, size=1001
+2018-05-14 14:48:22 init message: 지갑을 불러오는 중… (113.89 %)
+2018-05-14 14:48:22 keypool reserve 140
+
+> 생성 tx 취소 처리
+2018-05-14 14:48:22 UpdateStatusInternal : Failed to find tx for mint txid=5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc
+2018-05-14 14:48:22 Archive: archived pubcoinhash b660f11898951da3bddb089fd3e4fe8bf158bf207c0b6f8f6527d3c7f364b118
+2018-05-14 14:48:22 UpdateStatusInternal : Failed to find tx for mint txid=5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc
+2018-05-14 14:48:22 Archive: archived pubcoinhash 600ef2c300af1ff01ca393219b4e1da1e7149e7526e0cee64f2a253b5a64864c
+2018-05-14 14:48:22 UpdateStatusInternal : Failed to find tx for mint txid=5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc
+2018-05-14 14:48:22 Archive: archived pubcoinhash 3c9cef79b185dc4edbb38167b3f4dd02c7cad87c55e92b0ac12ddfcf5340bed4
+2018-05-14 14:48:22 UpdateStatusInternal : Pending txid 5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc removed because not in mempool
+2018-05-14 14:48:22 UpdateStatusInternal : Set mint 8d336fe6982990d6cdae33bf2b38b574e15d47a1ae16c6d1876eb67eb7b93fc1 isUsed to 0
+2018-05-14 14:48:22 UpdateStatusInternal : Failed to find tx for mint txid=5d6075c292f16a72ccb9fdb321c9eef2870c8e321256de6d0192701562f93bcc
+2018-05-14 14:48:22 Archive: archived pubcoinhash e7a414e5d8d424149833a3b0bfe6ec3a4392110dca0d3221ba7856de1037203a
+
+> 전파된 블록을 타 노드에서 거부
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=85 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=93 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=55 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=57 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=12 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=90 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=94 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=70 for old block that isn't in the main chain
+2018-05-14 14:48:22 ProcessGetData(): ignoring request from peer=95 for old block that isn't in the main chain
+2018-05-14 14:48:23 ProcessGetData(): ignoring request from peer=87 for old block that isn't in the main chain
+

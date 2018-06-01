@@ -1,0 +1,70 @@
+
+
+PoS 인듯
+2018-05-22 10:56:52 UpdateTip: new best=09293b62cefabcb038963d07fe27e611d6673bc9d4979308f89f736067739365  height=1173423  log2_work=69.071483  tx=2587022  date=2018-05-22 10:56:58 progress=1.000000  cache=2176
+2018-05-22 10:56:52 ProcessNewBlock : ACCEPTED Block 1173423 in 3053 milliseconds with size=122655
+
+> block contains... 와 UpdateTip 간 순서가 바뀐듯 하다.
+2018-05-22 10:57:12 ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+2018-05-22 10:57:12 UpdateTip: new best=29e06d36190396a6cd67be60806cea474e1d8911d089370c8758d831d5d24f18  height=1173424  log2_work=69.071485  tx=2587025  date=2018-05-22 10:57:19 progress=1.000000  cache=2179
+2018-05-22 10:57:13 ProcessNewBlock : ACCEPTED Block 1173424 in 1673 milliseconds with size=20659
+
+2018-05-22 10:57:37 receive version message: /PIVX Core:3.1.0.2/: version 70914, blocks=1164591, us=124.54.93.24:51472, peer=418
+2018-05-22 10:57:37 Added time data, samples 67, offset -9 (+0 minutes)
+2018-05-22 10:57:37 nTimeOffset = +0  (+0 minutes)
+2018-05-22 10:57:44 socket send error Broken pipe (32)
+
+==================================================
+
+2018-05-22 10:58:50 CreateCoinStake : kernel found
+2018-05-22 10:59:07 MintToTxIn: privatecoin version=2
+2018-05-22 10:59:07 CoinSpend: version=2 signatureHash=a4fe8718f69d726421593320c4884134d18d4f22bbf93a82516c674eae24b3c7 spendtype=1
+
+2018-05-22 10:59:07 CreateNewBlock(): total size 1000
+
+2018-05-22 10:59:08 AddToWallet() : found 8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec in block af8e3b853939e871cf703cbc25b875cbdd7fd3cfb27fc9228cea14e9a0d46bfe not in index
+2018-05-22 10:59:08 AddToWallet 8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec  new
+
+> 1173425 height 가 다른노드에서 먼저 들어옴.
+2018-05-22 10:59:08 CPUMiner : proof-of-stake block found eac16324646c28552ff0c93224be6d90574e94afac7286824de656be67daad61
+> 2018-05-22 10:59:08 UpdateTip: new best=f7321917c9c1399923ab8008020f61b4089d4290e71318c98da507554b06f77e  height=1173425  log2_work=69.071486  tx=2587027  date=2018-05-22 10:59:15 progress=1.000000  cache=2182
+> 2018-05-22 10:59:08 ProcessNewBlock : ACCEPTED Block 1173425 in 863 milliseconds with size=462
+2018-05-22 10:59:08 CPUMiner : proof-of-stake block was signed eac16324646c28552ff0c93224be6d90574e94afac7286824de656be67daad61
+
+2018-05-22 10:59:08 CBlock(hash=eac16324646c28552ff0c93224be6d90574e94afac7286824de656be67daad61, ver=4, hashPrevBlock=29e06d36190396a6cd67be60806cea474e1d8911d089370c8758d831d5d24f18, hashMerkleRoot=1756c6d706170736360ff879e0b64d70c6550ba212c0dd1e512efb5fd2324894, nTime=1526986752, nBits=1a7de4a7, nNonce=0, vtx=2)
+                    CTransaction(hash=1cd8ad582b, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 03b1e7110101)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                    CTransaction(hash=8927903ecd, ver=1, vin.size=1, vout.size=6, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), zerocoinspend c2025248e8030000339f686ff..., nSequence=1000)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                        CTxOut(nValue=1000.00000000, scriptPubKey=OP_ZEROCOINMINT 128 07efaebbf9)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 cb140bb99d)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 9fa9f5f550)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 69e8bafbb6)
+                        CTxOut(nValue=2.00000000, scriptPubKey=OP_DUP OP_HASH160 9bbd02618aac)
+                    vMerkleTree:  1cd8ad582b1b52b62d7ad84833dab1546f7980fe36c3ad99913c5e9a12df9002 8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec 1756c6d706170736360ff879e0b64d70c6550ba212c0dd1e512efb5fd2324894
+2018-05-22 10:59:08 generated 0.00
+2018-05-22 10:59:08 ERROR: PIVXMiner : generated block is stale
+
+
+> 아래는 제거 과정
+
+2018-05-22 10:59:08 UpdateStatusInternal : Failed to find tx for mint txid=8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec
+2018-05-22 10:59:08 Archive: archived pubcoinhash 9df8350c26b142c6ef92d5c6e5594d7e54b9f0db16524004ee99f56c6a7ebd2b
+2018-05-22 10:59:08 UpdateStatusInternal : Failed to find tx for mint txid=8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec
+2018-05-22 10:59:08 Archive: archived pubcoinhash 69a029e28d6edeecf94f66f3bf1c8d61d5b7659ce404a8396a7b8aab3821b69e
+2018-05-22 10:59:08 UpdateStatusInternal : Failed to find tx for mint txid=8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec
+2018-05-22 10:59:08 Archive: archived pubcoinhash eabc6d8485cb36b8124db7c690e30fc448a97bdd3ca6ea24f281bddc372d6ba6
+2018-05-22 10:59:08 UpdateStatusInternal : Pending txid 8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec removed because not in mempool
+2018-05-22 10:59:08 UpdateStatusInternal : Set mint a77c7b6d24b7f9407e7dda44153525a95ae5b617838c9521759da158f0e2f2af isUsed to 0
+2018-05-22 10:59:08 UpdateStatusInternal : Failed to find tx for mint txid=8927903ecd78f68bed3f9b0e3fa67eaeb1b8901c5a9b42fb40d7827235c113ec
+2018-05-22 10:59:08 Archive: archived pubcoinhash 63ebbc64961c9bb7bbb709c624b9ba3cef21c85e29ccf98a9e115e7c7681607b
+2018-05-22 10:59:12 socket recv error Connection reset by peer (54)
+2018-05-22 10:59:32 ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+2018-05-22 10:59:32 UpdateTip: new best=f196e773716199f5abcff24ad4e917ecf3967a36753be9040cbf77ac08565f34  height=1173426  log2_work=69.071487  tx=2587029  date=2018-05-22 10:59:25 progress=1.000000  cache=2184
+2018-05-22 10:59:32 ProcessNewBlock : ACCEPTED Block 1173426 in 395 milliseconds with size=20783
+2018-05-22 11:00:33 DisconnectOldProtocol : peer=422 using obsolete version 70912; disconnecting
+2018-05-22 11:00:33 ProcessMessage(version, 103 bytes) FAILED peer=422
+2018-05-22 11:01:00 ProcessNewBlock : block contains 0 zPIV mints and 7 zPIV spends
+

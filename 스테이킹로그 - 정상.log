@@ -1,0 +1,52 @@
+
+
+아래는 정상 스테이킹 로그
+
+
+CreateCoinStake : kernel found
+MintToTxIn: privatecoin version=2
+CoinSpend:  version=2 signatureHash=daf654d3f8db98cc605ae820b2269a082bce76f69abc67817550204c64c59355 spendtype=1 
+
+CreateNewBlock(): total size 1521
+
+AddToWallet() : found e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c in block 71b9a90bcdc2ea10bf9e1165b3796cd22006cf2dbdcb1fe30ed1178bc8130aa3 not in index
+AddToWallet e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c  new
+
+CPUMiner : proof-of-stake block found 336689c824ee4cc64f03dca8e25798b18f0a938913c7ac56755e23affc6dad9b 
+CPUMiner : proof-of-stake block was signed 336689c824ee4cc64f03dca8e25798b18f0a938913c7ac56755e23affc6dad9b 
+
+ProcessBlockFound   CBlock(hash=336689c824ee4cc64f03dca8e25798b18f0a938913c7ac56755e23affc6dad9b, ver=4, hashPrevBlock=e6267aa3f5bd0fd39849ce598052cffd325f0fa64fe5da5dbe53c0b6313bfb53, hashMerkleRoot=aa9a4bd14603f0e97da559b0dc11096fcdc418cfe2630464cc50db93f3684cbf, nTime=1526972750, nBits=1b009c89, nNonce=0, vtx=3)
+                    CTransaction(hash=d6dde6b07d, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 03c4e6110101)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                    CTransaction(hash=e1a7a48a46, ver=1, vin.size=1, vout.size=6, nLockTime=0)
+                        CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), zerocoinspend c202a554f4010000a37dc0719..., nSequence=500)
+                        CTxOut(nValue=0.00000000, scriptPubKey=)
+                        CTxOut(nValue=500.00000000, scriptPubKey=OP_ZEROCOINMINT 128 5594f4f948)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 2f1807b55a)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 1fafc76fe8)
+                        CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 51f985b267)
+                        CTxOut(nValue=2.00000000, scriptPubKey=OP_DUP OP_HASH160 eb8def773efc)
+                    CTransaction(hash=ab238b1650, ver=1, vin.size=3, vout.size=2, nLockTime=0)
+                        CTxIn(COutPoint(a550d33a7a7bb2da0fd47301a4ea03bba704375751b383e138bc5c5cc1a9120b, 1), scriptSig=3045022100aa29063518b0a0)
+                        CTxIn(COutPoint(5ea6ed65a6960c722c3814e910692ad718d5355467ffdfba02dc32f3a4ccb988, 2), scriptSig=3045022100e9a4a5cfa1b185)
+                        CTxIn(COutPoint(2427b16ef472ce1df2684b656ca7d1f4fb297eb087f0f91e93b08b5bce35c72e, 0), scriptSig=304402201f238f24fa0b5887)
+                        CTxOut(nValue=500.00000000, scriptPubKey=OP_DUP OP_HASH160 726ff2166e63)
+                        CTxOut(nValue=0.35542305, scriptPubKey=OP_DUP OP_HASH160 7872861226b6)
+                    vMerkleTree:  d6dde6b07d562d6a58aa521d7c12b097fd826b58fe52d51e695de8f7dc86f24e e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c ab238b1650433624a332a610d1ed07e73c6dd939b9e5a10ff7538c535919bd06 b1ac361b3e0aae6951f5e9bf4ce79e74bc18efb8e2d0a3eb7ea5495f4cc665f5 492d82faeddd5fd36cf3d07dc057566db6d2477ce5119d371bef5f391c5d047d aa9a4bd14603f0e97da559b0dc11096fcdc418cfe2630464cc50db93f3684cbf
+ProcessBlockFound   generated 0.00
+ProcessBlockFound   keypool keep 149
+ProcessBlockFound   에러가능   PIVXMiner : generated block is stale
+
+ProcessNewBlock     ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+
+AddToWallet e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c  update
+ConnectBlock: f2fd1d712797687745fca29e0f1db4a5ed39c14665f8c85f62f979d241b7d1ad detected zerocoinspend in transaction e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c 
+GUI: AddressTablePriv_ZC::updateEntry : Warning: Got CT_UPDATED, but entry is not in model
+AddToWallet e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c  
+UpdateTip: new best=336689c824ee4cc64f03dca8e25798b18f0a938913c7ac56755e23affc6dad9b  height=1173188  log2_work=69.071212  tx=2586437  date=2018-05-22 07:05:50 progress=1.000001  cache=2186
+AddToWallet e1a7a48a46504b74f0c441fd1035546d44d5e3e02b7de11fc8adb098c9f0104c  
+ProcessNewBlock : ACCEPTED Block 1173188 in 683 milliseconds with size=23113
+keypool added key 1150, size=1001
+init message: 지갑을 불러오는 중… (114.89 %)
+keypool reserve 150

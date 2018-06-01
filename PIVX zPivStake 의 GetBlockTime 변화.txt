@@ -1,0 +1,89 @@
+
+1184795 height 이후
+
+2018-05-30 09:57:57 UpdateTip: new best=dd66bc453ef197cb11a6bb5e285d414326cd4388a70da2f9602f89002fc440bc  height=1184795  log2_work=69.084954  tx=2617348 
+date=2018-05-30 09:58:17 progress=1.000001  cache=2053
+
+
+즉시 Stake 로직이 실행되었고,
+
+09:57:58 턴에서 못찾음
+ -> ~ 09:58:58 (탐색범위)
+09:58:02 턴에서 못찾음
+ -> ~ 09:59:02 (탐색범위)
+09:58:06 턴에서 못찾음
+ -> ~ 09:59:06 (탐색범위)
+09:58:11 턴에서 찾음 36초 hash drift 후에 찾은 건데 따지고 보면 24초 후임.
+ -> ~ 09:59:11 (탐색범위)
+
+따지고 보면 09:58:35 를 nTimeTx 해서 찾았다고 볼 수 있을 듯 한데. 해당 nTimeTx 는 어차피 검색 범위 였는데 왜 못 찾은건가.
+해당 nTimeTx 는 어차피 검색 범위 였는데 왜
+왜냐하면 >
+
+2018-05-30 09:58:06 nHashDrift [uid]    5000.000        7815353785642110384     444111826       000000000000789bd20000000000000000000000000000000000000000000000        1527661674      000000000000000000000000000
+2018-05-30 09:58:11 nHashDrift [uid]    5000.000        11745689924721163067    444111826       000000000000789bd20000000000000000000000000000000000000000000000        1527662270      000000000000000000000000000
+
+2018-05-30 10:03:12 nHashDrift [uid]    5000.000        11745689924721163067    443136295       00000000000069b9270000000000000000000000000000000000000000000000        1527662270      000000000000000000000000000
+2018-05-30 10:03:16 nHashDrift [uid]    5000.000        11745689927531453603    443136295       00000000000069b9270000000000000000000000000000000000000000000000        1527662720      000000000000000000000000000
+
+2018-05-30 10:18:18 nHashDrift [uid]    5000.000        11745689927531453603    444024935       0000000000007748670000000000000000000000000000000000000000000000        1527662720      000000000000000000000000000
+2018-05-30 10:18:22 nHashDrift [uid]    5000.000        11745689923990439419    444024935       0000000000007748670000000000000000000000000000000000000000000000        1527663447      000000000000000000000000000
+
+	LogPrintf("nHashDrift stakeInput\tnValueIn\tmodifier\tnBits\ttargetPerCoinDay\tnTimeBlockFrom\thashPOS\n");
+    LogPrintf("nHashDrift [uid]\t%0.3f\t%lu\t%d\t%s\t%d\t%s\n",
+		(float)nValueIn/COIN,
+		nStakeModifier,					// 스테이크에 의해 고정
+		nBits,							// 블록에 의해 고정
+		bnTargetPerCoinDay.ToString(),	// 블록에 의해 고정
+		nTimeBlockFrom,					// 스테이크에 의해 고정
+		hashProofOfStake.ToString()		// 그냥 빈값
+	);
+
+같은 denom 덩어리 인데 4초 후에 실행되었을 뿐,
+기존에 고정값이라고 생각 했던 nTimeBlockFrom 와 nStakeModifier 가 변경되어 있다.
+무엇이 우선인가?
+
+일단 nTimeBlockFrom 은 3시간 30분 쯤 후에 10분쯤 후로 조정 되었다.
+이 후 에도 시간 간격에 상관없이 변경 되었다. 이게 무슨 의미 인가?
+문제는 동일 nTimeBlockFrom 을 가졌던 모든 denom 이 동일한 값으로 변경되었다는 것이다.
+
+zpiv denom 의 특성인가? 물 위를 떠다니는?
+확실히 zpiv 의 GetIndexFrom 와 GetModifier method 는 piv 와는 다른 모습이다.
+
+--------------
+
+2018-05-30 13:19:41 ERROR: ContextualCheckZerocoinStake: accumulator checksum is different than the block 200 blocks previous. stake=3538617991 block200=3975705181
+
+위의 nTimeBlockFrom 와 nStakeModifier 변경과 연관이 있어 보인다.
+처리중 변경되어 stake 의 checksum(?) 이 일치 하지 않는 문제로 보인다.
+
+2018-05-30 13:19:37 nHashDrift [uid]    500.000 3115324213381597634     453068303       000000000001460f000000000000000000000000000000000000000000000000        1527671810      00000000000000000000000000000000000
+2018-05-30 13:19:37 ..
+2018-05-30 13:19:41 nHashDrift [uid]    500.000 12720192583998447737    453068303       000000000001460f000000000000000000000000000000000000000000000000        1527672945      00000000000000000000000000000000000
+
+위 로그를 보면 nHashDrift loop가 2회인데, 해당 CreateCoinStake 루프에서 신규(신상)로 처리한 hash 임을 알 수 있다.
+
+해결방안으로 다음이 가능 할 것 같다.
+
+3,4 번으로 해결하는 방안을 찾자
+
+1. nHashDrift 를 max 로 끌어 올린다.
+> 그래도 신규 hash 에서는 발생이 가능하다.
+
+2. zpiv 처리 속도를 piv 만큼 끌어 올린다.
+> 코어팀에서 해주겠지...
+
+3. 타 노드 스테이킹에서 오류가 debug.log에 없는게 걸러져서 없는건지, 발생을 안하는건지 모르겠지만(일단 걸러 지긴 할듯하나, 걸러지더라도 오차로 인해 오류는 날 것 같다)
+아래 코드 부분을 분석해서 대응 가능한 곳은 대응하도록 하자
+
+LoadExternalBlockFile
+	ProcessNewBlock(state, NULL, &block, dbp)
+	ProcessNewBlock(dummy, NULL, &block, &it->second)
+
+ProcessMessage
+	ProcessNewBlock(state, pfrom, &block)
+
+ProcessBlockFound
+	ProcessNewBlock(state, NULL, pblock)
+
+4. ProcessBlockFound > ProcessBlockNew > AcceptBlock 으로 자체 스테이킹 처리가 될때 AcceptBlock 에서 ContextualCheckZerocoinStake 체크를 제외하는 방법을 사용 할 수 있을까?

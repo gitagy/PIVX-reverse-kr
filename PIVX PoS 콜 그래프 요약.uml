@@ -1,0 +1,88 @@
+@startuml
+title PIVX
+
+state main {
+  state AppInit
+  state AppInit2
+  AppInit --> AppInit2
+  AppInit2 --> GenerateBitcoins
+  AppInit2 --> StartNode
+}
+
+state StartNode {
+  state ThreadMessageHandler {
+    state ProcessMessage
+    state SendMessage
+  }
+}
+
+state GenerateBitcoins {
+  state ThreadBitcoinMiner
+  state BitcoinMiner
+  ThreadBitcoinMiner --> BitcoinMiner
+}
+
+state BitcoinMiner {
+  state CreateNewBlockWithKey
+  state CreateNewBlock
+  state CreateCoinStake {
+    state findInputLists {
+      state SelectStakeCoins {
+        state AvailableCoins
+      }
+    }
+  state findStakingTargetHit {
+    state nHashDriftLoop {
+      state Stake
+      Stake --> validationStaking
+    }
+  }
+  }
+
+  BitcoinMiner --> CreateNewBlockWithKey
+  CreateNewBlockWithKey --> CreateNewBlock
+  CreateNewBlock --> CreateCoinStake
+  CreateCoinStake --> findInputLists
+  findInputLists --> findStakingTargetHit
+  
+  state ProcessBlockFound
+  state NotifyToNodes
+  
+  CreateCoinStake --> ProcessBlockFound
+  ProcessBlockFound --> ProcessNewBlock
+  ProcessBlockFound --> NotifyToNodes
+  
+  
+}
+
+
+
+state ReceiveNewBlock {
+  state UpdateTip
+  UpdateTip --> ProcessMessage
+  ProcessMessage --> ProcessNewBlock
+}
+
+state ProcessNewBlock {
+}
+
+state AcceptBlock {
+    state CheckProofOfStake
+    state AcceptBlockHeader
+    state CheckBlock
+    state ContextualCheckBlock
+    CheckProofOfStake --> AcceptBlockHeader
+    AcceptBlockHeader --> CheckBlock
+    CheckBlock --> ContextualCheckBlock
+}
+
+state validationStaking {
+  state CheckStake
+  state StakeTargetHit
+  CheckStake --> StakeTargetHit
+}
+
+ProcessNewBlock --> AcceptBlock
+AcceptBlock --> validationStaking
+
+@enduml

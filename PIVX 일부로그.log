@@ -1,0 +1,63 @@
+
+CreateCoinStake : kernel found
+# 상,하 오래 걸림 (zerocoin spending 과 securityLevel 연관 문제 인듯)
+MintToTxIn: privatecoin version=2
+CoinSpend:
+ version=2 signatureHash=f82d69964540c53c24bd82e297bcd42365576bd24c764c6da261db46adc8cbd2 spendtype=1
+CreateNewBlock(): total size 1373
+
+====================================================================================================
+
+AddToWallet() : found 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53 in block 182298429b51f8dce87c5b657b4cc419257dce8d6c511b5e12641179a8fd41aa not in index
+AddToWallet 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53  new
+
+====================================================================================================
+
+CPUMiner : proof-of-stake block found 7ca09ce84f03c53846b80bc0ba055c33acfaa28a0233f897ade223d652431bad
+CPUMiner : proof-of-stake block was signed 7ca09ce84f03c53846b80bc0ba055c33acfaa28a0233f897ade223d652431bad
+
+CBlock(hash=7ca09ce84f03c53846b80bc0ba055c33acfaa28a0233f897ade223d652431bad, ver=4, hashPrevBlock=8cf22718e7a07c5b15f4921d4463d88ea326d076fc2217aed13d50e8f3032df8, hashMerkleRoot=888348898c37f9d1982d6ef3a97a76428b3af3106163411750de35cff43bffe0, nTime=1527773646, nBits=1a7304cd, nNonce=0, vtx=3)
+  CTransaction(hash=76d864fc1c, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+    CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), coinbase 038a1a120101)
+    CTxOut(nValue=0.00000000, scriptPubKey=)
+
+  CTransaction(hash=21eb008712, ver=1, vin.size=1, vout.size=6, nLockTime=0)
+    CTxIn(COutPoint(0000000000000000000000000000000000000000000000000000000000000000, 4294967295), zerocoinspend c202c34b88130000bf6b23408..., nSequence=5000)
+    CTxOut(nValue=0.00000000, scriptPubKey=)
+    CTxOut(nValue=5000.00000000, scriptPubKey=OP_ZEROCOINMINT 128 0b57c0b09e)
+    CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 718cf903aa)
+    CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 128 51d8b0ef87)
+    CTxOut(nValue=1.00000000, scriptPubKey=OP_ZEROCOINMINT 129 e15ff2f806)
+    CTxOut(nValue=2.00000000, scriptPubKey=OP_DUP OP_HASH160 4b2b10189023)
+
+  CTransaction(hash=9ae33c42d1, ver=1, vin.size=2, vout.size=2, nLockTime=0)
+    CTxIn(COutPoint(ce95315c2217f3621f3d884697039ded470f3372cb98e2f8e1c56198b88198d2, 5), scriptSig=304402205e1da408926494cb)
+    CTxIn(COutPoint(ec79117268fcd02a5ed1bb271280a607d28e1236021e563e5cb08fb29c2115d2, 2), scriptSig=3045022100c10be286204a8b)
+    CTxOut(nValue=3.86000000, scriptPubKey=OP_DUP OP_HASH160 3c8b17411251)
+    CTxOut(nValue=1.14000000, scriptPubKey=OP_DUP OP_HASH160 2b8c428ea138)
+
+  vMerkleTree:  76d864fc1c913e219b03ff405b5b6a1fbdf24fe36e535161503dc1c5b6520749 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53 9ae33c42d13170457c3d7f08a5141c61fb985cf55ab6e1cb8aef95af481d72c9 7b156ec6cafb1f70d26d32ed9cc3d111ac6aa799bb6ebbcf6bb309c9f8732591 fb685b7314e9585deb741e820f90be4d0ec57bb36934c28b7b1de6dbe63c6f4d 888348898c37f9d1982d6ef3a97a76428b3af3106163411750de35cff43bffe0
+
+====================================================================================================
+
+# ProcessBlockFound
+generated 0.00
+keypool keep 15
+
+# ProcessNewBlock
+ProcessNewBlock : block contains 4 zPIV mints and 1 zPIV spends
+
+    AddToWallet 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53  update
+    ConnectBlock: f270f59140983c9aa19174dfd87099b6c4a930b28f3cc917a1fc84981fdd1e59 detected zerocoinspend in transaction 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53
+    AddToWallet 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53
+
+UpdateTip: new best=7ca09ce84f03c53846b80bc0ba055c33acfaa28a0233f897ade223d652431bad  height=1186442  log2_work=69.086931  tx=2621598  date=2018-05-31 13:34:06 progress=0.999999  cache=2139
+
+    AddToWallet 21eb008712ae6d546f1b6b4de666605fbff5108d2ba59535b2048ac0dde87d53
+
+ProcessNewBlock : ACCEPTED Block 1186442 in 435 milliseconds with size=20691
+
+keypool added key 1016, size=1001
+keypool reserve 16
+
+# peer 에 전달
