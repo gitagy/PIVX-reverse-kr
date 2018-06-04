@@ -92,6 +92,11 @@ int64_t GetMedianTimePast() const
 
 ## zPiv stake 의 GetBlockTime 과 StakeModifier 변화
 
+The nStakeModifier for the zpiv stake changes less often since it is based on the first accumulator checkpoint that occurs 60 minutes after pindexFrom.
+
+Accumulator checkpoints change maximum of every 10 blocks.
+sometimes it can be an even longer span than that too.
+
 ## kernel found 후 MintToTxin 까지의 딜레이
 
 zerocoin speding 딜레이
