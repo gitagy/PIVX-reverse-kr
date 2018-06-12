@@ -1,6 +1,10 @@
 @startuml
 title PIVX
 
+note top of main
+ bootstrap
+end note
+
 state main {
   state AppInit
   state AppInit2
@@ -9,12 +13,24 @@ state main {
   AppInit2 --> StartNode
 }
 
+note top of StartNode
+ My Node
+end note
+
 state StartNode {
   state ThreadMessageHandler {
     state ProcessMessage
     state SendMessage
   }
 }
+
+state PeerNodes {
+  PeerNodes --> ReceiveNewBlock
+}
+
+note top of GenerateBitcoins
+ PoW 든 PoS 든 , 마이닝 로직
+end note
 
 state GenerateBitcoins {
   state ThreadBitcoinMiner
@@ -51,11 +67,15 @@ state BitcoinMiner {
   CreateCoinStake --> ProcessBlockFound
   ProcessBlockFound --> ProcessNewBlock
   ProcessBlockFound --> NotifyToNodes
+  NotifyToNodes --> SendMessage
   
   
 }
 
-
+note top of ReceiveNewBlock
+ 연결된 피어로 부터
+ 새로운 블록을 수신
+end note
 
 state ReceiveNewBlock {
   state UpdateTip
