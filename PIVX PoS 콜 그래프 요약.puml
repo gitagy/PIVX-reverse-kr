@@ -63,13 +63,11 @@ state BitcoinMiner {
   
   state ProcessBlockFound
   state NotifyToNodes
-  
+
   CreateCoinStake --> ProcessBlockFound
   ProcessBlockFound --> ProcessNewBlock
   ProcessBlockFound --> NotifyToNodes
   NotifyToNodes --> SendMessage
-  
-  
 }
 
 note top of ReceiveNewBlock
@@ -91,6 +89,7 @@ state AcceptBlock {
     state AcceptBlockHeader
     state CheckBlock
     state ContextualCheckBlock
+
     CheckProofOfStake --> AcceptBlockHeader
     AcceptBlockHeader --> CheckBlock
     CheckBlock --> ContextualCheckBlock
