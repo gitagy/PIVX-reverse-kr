@@ -1,0 +1,254 @@
+﻿
+2018-05-30 09:58:11 CreateCoinStake : kernel found 성공
+2018-05-30 13:19:37 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-05-30 13:49:05 CreateCoinStake : kernel found 성공
+2018-05-30 15:15:44 CreateCoinStake : kernel found 성공
+2018-05-30 15:29:16 CreateCoinStake : kernel found 성공
+> 4
+
+2018-05-31 01:09:11 CreateCoinStake : kernel found 성공
+2018-05-31 06:52:13 CreateCoinStake : kernel found 성공
+2018-05-31 09:42:11 CreateCoinStake : kernel found 성공
+2018-05-31 13:34:20 CreateCoinStake : kernel found 성공
+> 4
+
+2018-06-01 00:03:38 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-01 04:26:46 CreateCoinStake : kernel found 성공
+2018-06-01 08:29:43 CreateCoinStake : kernel found 성공
+2018-06-01 09:43:35 CreateCoinStake : kernel found 성공
+2018-06-01 16:35:30 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-01 19:56:50 CreateCoinStake : kernel found 성공
+> 4
+
+2018-06-02 00:26:07 CreateCoinStake : kernel found 성공
+2018-06-02 00:41:32 CreateCoinStake : kernel found 성공
+2018-06-02 04:42:25 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-02 06:56:28 CreateCoinStake : kernel found 실패 generated block is stale (경쟁에서 짐)
+2018-06-02 06:56:31 CreateCoinStake : kernel found 성공 (바로 위와 동일한 UTXO 에서 스테이킹 되었는데, 운이 좋았던듯)
+2018-06-02 09:47:13 CreateCoinStake : kernel found 성공
+
+2018-06-02 11:42:47 CreateCoinStake : kernel found 성공
+2018-06-02 17:44:31 CreateCoinStake : kernel found 성공
+2018-06-02 23:48:51 CreateCoinStake : kernel found 실패 
+	2018-06-02 23:48:54 CreateNewBlock(): total size 124918
+	2018-06-02 23:48:57 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f6e6de290d5a9957d927f7711ff031c569eb820ed9cb7b4c83561f6aa2132376 is already in block 1189844
+	2018-06-02 23:48:57 ERROR: ConnectBlock: failed to add block 91aca89be23d6964d85bbde783caba436999c7399a935ee17f4e9f0ed5d54b11 with invalid zerocoinspend
+	2018-06-02 23:48:57 CreateNewBlock() : TestBlockValidity failed
+2018-06-02 23:48:58 CreateCoinStake : kernel found 성공
+> 7
+
+2018-06-03 15:09:48 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-03 19:45:55 CreateCoinStake : kernel found 성공
+> 1
+
+-30 ~ +90 (120s)
+
+2018-06-04 13:14:53 CreateCoinStake : kernel found 성공
+2018-06-04 18:50:00 CreateCoinStake : kernel found 실패 (another node find short timestamp)
+2018-06-04 20:05:05 CreateCoinStake : kernel found 성공
+2018-06-04 20:40:22 CreateCoinStake : kernel found 실패 (another node find short timestamp)
+> 2
+
+-40 ~ +60 (100s)
+
+2018-06-05 04:59:01 CreateCoinStake : kernel found 성공
+2018-06-05 10:54:25 CreateCoinStake : kernel found 성공
+2018-06-05 14:31:54 CreateCoinStake : kernel found 성공
+2018-06-05 17:34:28 CreateCoinStake : kernel found 실패
+	2018-06-05 17:34:30 CreateNewBlock(): total size 244522
+	2018-06-05 17:34:35 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f81d1d34749ffc3485fb95d77696ce59745bb14e508d3ee9cd2b4fc6bb5bb7d3 is already in block 1193657
+	2018-06-05 17:34:35 ERROR: ConnectBlock: failed to add block a2ef25f25dccd5b69d6b537043506d02bf24793de59c91c2700ad1ff1e650b4d with invalid zerocoinspend
+	2018-06-05 17:34:35 CreateNewBlock() : TestBlockValidity failed
+2018-06-05 17:34:36 CreateCoinStake : kernel found 성공 (정확히 위에서 다음 해싱 라운드 였음)
+	2018-06-05 17:34:40 CreateNewBlock(): total size 1000 # 트랜잭션이 없어서 성공한 것 맞다. 가비지컬렉션이 안되는 것 인가?
+2018-06-05 21:05:26 CreateCoinStake : kernel found 성공
+2018-06-05 22:32:58 CreateCoinStake : kernel found 성공
+> 6
+
+2018-06-06 03:15:19 CreateCoinStake : kernel found 성공
+2018-06-06 08:56:42 CreateCoinStake : kernel found 성공
+2018-06-06 23:13:27 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+> 2
+
+2018-06-07 19:38:33 CreateCoinStake : kernel found 실패 generated block is stale (경쟁에서 짐)
+2018-06-07 19:38:42 CreateCoinStake : kernel found 성공 (바로 위와 동일한 UTXO 에서 스테이킹 되었는데, 2번째임, 운이 아닌거 같은데...)
+> 1
+
+2018-06-08 09:20:14 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-08 13:50:46 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-08 14:40:29 CreateCoinStake : kernel found 성공
+2018-06-08 15:07:19 CreateCoinStake : kernel found 성공
+> 2
+
+2018-06-09 13:46:14 CreateCoinStake : kernel found 성공
+2018-06-09 20:02:55 CreateCoinStake : kernel found 성공
+2018-06-09 22:06:55 CreateCoinStake : kernel found 성공
+> 3
+
+2018-06-10 11:36:03 CreateCoinStake : kernel found 성공 > 로그상 실패 여야 하는데 왜 성공이지? (another node find short timestamp) > 맥북에어에서 성공
+2018-06-10 12:08:19 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-10 12:21:02 CreateCoinStake : kernel found 성공
+2018-06-10 14:03:35 CreateCoinStake : kernel found 성공
+2018-06-10 16:59:54 CreateCoinStake : kernel found 성공
+2018-06-10 20:40:45 CreateCoinStake : kernel found 성공
+2018-06-10 22:42:03 CreateCoinStake : kernel found 성공
+> 6
+
+2018-06-11 04:02:00 CreateCoinStake : kernel found 성공 (맥북에어)
+2018-06-11 05:54:31 CreateCoinStake : kernel found 실패 포함된 트랜잭션이 너무 많음 - CreateNewBlock(): total size 748900
+2018-06-11 08:43:58 CreateCoinStake : kernel found 실패 
+	2018-06-11 08:44:02 CreateNewBlock(): total size 650841
+	2018-06-11 08:44:16 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f9ffabeb1ed17bfef24fe3dbe144930714873894107953531822fcf588196702 is already in block 1201921
+	2018-06-11 08:44:16 ERROR: ConnectBlock: failed to add block 70eb9835f63c82aa4da84191cf8bf32005af2e001a4acd574511215ed5236b16 with invalid zerocoinspend
+	2018-06-11 08:44:16 CreateNewBlock() : TestBlockValidity failed
+2018-06-11 08:44:17 CreateCoinStake : kernel found 성공
+2018-06-11 22:05:00 CreateCoinStake : kernel found 실패 (경쟁에서 짐)
+	2018-06-11 22:05:04 ERROR: ContextualCheckBlock : block height mismatch in coinbase
+	2018-06-11 22:05:04 ERROR: ProcessNewBlock : AcceptBlock FAILED
+	2018-06-11 22:05:04 ERROR: PIVXMiner : ProcessNewBlock, block not accepted
+2018-06-11 22:05:04 CreateCoinStake : kernel found 성공 (바로 위와 동일한 UTXO 에서 스테이킹 되었는데, 3번째임, 운이 아닌거 같은데...)
+> 3
+
+2018-06-12 04:43:04 CreateCoinStake : kernel found 성공
+2018-06-12 06:35:42 CreateCoinStake : kernel found 실패
+	2018-06-12 06:35:46 CreateNewBlock(): total size 718692
+	2018-06-12 06:36:00 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f78caa703769eadd7b0a3b47f9ef769dead4f5548cdb4661d0c4132f8c0d601f is already in block 1203237
+	2018-06-12 06:36:00 ERROR: ConnectBlock: failed to add block f49e0fafc00abeb2f1f7370d3543ee67b38889db206af4926c5fab3de2b32e25 with invalid zerocoinspend
+	2018-06-12 06:36:00 CreateNewBlock() : TestBlockValidity failed
+2018-06-12 06:36:02 CreateCoinStake : kernel found 성공
+2018-06-12 07:20:36 CreateCoinStake : kernel found 성공
+2018-06-12 17:16:40 CreateCoinStake : kernel found 성공
+2018-06-12 20:47:50 CreateCoinStake : kernel found 성공
+> 5
+
+2018-06-13 03:43:00 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-13 17:21:10 CreateCoinStake : kernel found 성공
+2018-06-13 23:13:36 CreateCoinStake : kernel found 성공
+> 2
+
+2018-06-14 14:13:41 CreateCoinStake : kernel found
+> 1
+
+2018-06-15 07:29:56 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-15 11:24:22 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-15 16:47:19 CreateCoinStake : kernel found 실패 ERROR: PIVXMiner : generated block is stale
+2018-06-15 20:04:20 CreateCoinStake : kernel found 성공
+2018-06-15 23:47:21 CreateCoinStake : kernel found 성공
+> 2
+
+2018-06-16 00:30:00 CreateCoinStake : kernel found 실패 ContextualCheckZerocoinStake
+2018-06-16 11:27:35 CreateCoinStake : kernel found 성공
+2018-06-16 12:17:25 CreateCoinStake : kernel found 실패
+	2018-06-16 12:17:29 CreateNewBlock(): total size 452218
+	2018-06-16 12:17:38 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f0f545c75bc93b672c87fd17c2e0b695e2856f0fa89b30e79ded02e1a2ad7092 is already in block 1209440
+	2018-06-16 12:17:38 ERROR: ConnectBlock: failed to add block b0292a7092dacc05cd3ae48242e1a6ae1f816615d2ff6686874b408f24e6c644 with invalid zerocoinspend
+	2018-06-16 12:17:38 CreateNewBlock() : TestBlockValidity failed
+> 1
+
+2018-06-17 04:40:52 CreateCoinStake : kernel found 성공
+2018-06-17 11:22:29 CreateCoinStake : kernel found 성공
+2018-06-17 16:16:37 CreateCoinStake : kernel found 성공
+2018-06-17 17:09:28 CreateCoinStake : kernel found 성공
+2018-06-17 21:57:09 CreateCoinStake : kernel found 성공 < enabled new source
+> 5
+
+	# 오전 4:24 2018-06-18
+	# staking without transactions
+	# ContextualCheckZerocoinStake function return true always.
+
+2018-06-18 21:10:38 CreateCoinStake : kernel found 성공
+> 1
+
+2018-06-19 07:12:15 CreateCoinStake : kernel found 성공
+2018-06-19 14:44:10 CreateCoinStake : kernel found 성공
+2018-06-19 17:46:31 CreateCoinStake : kernel found 성공
+2018-06-19 19:21:57 CreateCoinStake : kernel found 성공
+> 4
+
+2018-06-20 01:23:38 CreateCoinStake : kernel found 성공
+2018-06-20 04:42:15 CreateCoinStake : kernel found 성공
+2018-06-20 15:43:49 CreateCoinStake : kernel found 실패
+	2018-06-20 15:43:52 MintToTxIn: privatecoin version=2
+	2018-06-20 15:43:52 CoinSpend:
+	 version=2 signatureHash=c762bc74666f10393c52d3fe31a4070a0375dc9772e023e1546985448f71309f spendtype=1
+	2018-06-20 15:43:53 CreateNewBlock(): total size 24015
+	2018-06-20 15:43:54 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f57806505fc9924b9de487ab626dfd44bfc50731505e5a9d58b2219ad2686761 is already in block 1215305
+	2018-06-20 15:43:54 ERROR: ConnectBlock: failed to add block 31707f412f625f1da6e2c3646a7b94f4cecd16a942ce4e0b156446bb814ffe42 with invalid zerocoinspend
+	2018-06-20 15:43:54 CreateNewBlock() : TestBlockValidity failed
+2018-06-20 16:14:02 CreateCoinStake : kernel found 성공
+2018-06-20 19:38:35 CreateCoinStake : kernel found 실패 - timestamp 경쟁에서 짐
+2018-06-20 19:41:26 CreateCoinStake : kernel found 성공
+2018-06-20 21:04:04 CreateCoinStake : kernel found 실패 - timestamp 경쟁에서 짐
+2018-06-20 22:23:56 CreateCoinStake : kernel found 실패 - generated block is stale
+2018-06-20 23:52:10 CreateCoinStake : kernel found 실패 > 왜지? ContextualCheckZerocoinStake 인가, 위에 timestamp 경쟁에서 진 것도 다시 봐야 할듯
+> 4
+
+2018-06-21 00:17:29 CreateCoinStake : kernel found 실패  generated block is stale
+2018-06-21 00:17:41 CreateCoinStake : kernel found 성공 (바로 위와 동일한 UTXO 에서 스테이킹 되었는데 운임, 비슷한 답)
+2018-06-21 06:55:00 CreateCoinStake : kernel found 성공
+2018-06-21 15:00:31 CreateCoinStake : kernel found 실패
+	2018-06-21 15:00:36 CreateNewBlock(): total size 495549
+	2018-06-21 15:00:46 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f4f64213960fec6a592c67ab8d7f07ddaba6c87773ba2ac40000674a9c169caf is already in block 1216954
+	2018-06-21 15:00:46 ERROR: ConnectBlock: failed to add block 05f042d42581d06705e77d9bc151f43f4e0b3b78f29835f7078db47322ae47c2 with invalid zerocoinspend
+	2018-06-21 15:00:46 CreateNewBlock() : TestBlockValidity failed
+2018-06-21 15:00:48 CreateCoinStake : kernel found 성공
+2018-06-21 15:33:47 CreateCoinStake : kernel found 실패
+	2018-06-21 15:33:50 CreateNewBlock(): total size 123937
+	2018-06-21 15:33:53 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f4703682092745a222e048fed5b9604c76237ae18bf929d07b5d5ee0ba6fe3a7 is already in block 1216959
+	2018-06-21 15:33:53 ERROR: ConnectBlock: failed to add block a8f321395e179c27f355f6138bf1c9896dc5b6f230f1fc72e95248cf0dae0e06 with invalid zerocoinspend
+	2018-06-21 15:33:53 CreateNewBlock() : TestBlockValidity failed
+2018-06-21 15:33:53 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-21 15:33:58 CreateCoinStake : kernel found 성공
+2018-06-21 20:29:34 CreateCoinStake : kernel found 성공
+2018-06-21 22:45:03 CreateCoinStake : kernel found 성공
+> 6
+
+2018-06-22 15:04:43 CreateCoinStake : kernel found 실패 - 경쟁
+2018-06-22 15:04:51 CreateCoinStake : kernel found 성공
+2018-06-22 21:58:47 CreateCoinStake : kernel found 실패
+	2018-06-22 21:58:58 CreateNewBlock(): total size 143064
+	2018-06-22 21:59:01 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f6bd521f983008b67d4354880991100531b4124440a177d8272d349793609019 is already in block 1218837
+	2018-06-22 21:59:01 ERROR: ConnectBlock: failed to add block c9d4d5fd28a6e18a7ca69bb82862b7c904dec952feaee4392b4e3492cc8ebbeb with invalid zerocoinspend
+	2018-06-22 21:59:01 CreateNewBlock() : TestBlockValidity failed
+2018-06-22 21:59:02 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-22 21:59:12 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-22 21:59:25 CreateCoinStake : kernel found 성공
+> 2
+
+2018-06-23 00:27:37 CreateCoinStake : kernel found 실패
+2018-06-23 00:27:42 CreateCoinStake : kernel found 실패
+2018-06-23 02:29:00 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-23 02:29:03 CreateCoinStake : kernel found 성공
+2018-06-23 11:55:04 CreateCoinStake : kernel found 실패 경쟁
+2018-06-23 13:54:47 CreateCoinStake : kernel found 실패 경쟁
+2018-06-23 17:29:04 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-23 17:29:17 CreateCoinStake : kernel found 실패 generated block is stale
+2018-06-23 17:29:30 CreateCoinStake : kernel found 성공
+2018-06-23 18:44:17 CreateCoinStake : kernel found 실패 경쟁
+2018-06-23 21:20:09 CreateCoinStake : kernel found 실패
+	2018-06-23 21:20:12 CreateNewBlock(): total size 724407
+	2018-06-23 21:20:26 ERROR: ContextualCheckZerocoinSpend : zPIV spend with serial f90e09202f4bb1ac18c8ce753daff854fe92cda9a4dec4e437a50fae6f6d5b6d is already in block 1220278
+	2018-06-23 21:20:26 ERROR: ConnectBlock: failed to add block 6480bc4b49fedf3c122b5d2be27f981db9be9de19a14e3bbfd95e1db3efac416 with invalid zerocoinspend
+	2018-06-23 21:20:26 CreateNewBlock() : TestBlockValidity failed
+2018-06-23 21:20:26 CreateCoinStake : kernel found 성공
+2018-06-23 21:40:35 CreateCoinStake : kernel found 성공
+> 4
+
+2018-06-24 02:50:54 CreateCoinStake : kernel found 실패 경쟁
+2018-06-24 07:01:30 CreateCoinStake : kernel found 실패 timestamp 경쟁
+2018-06-24 09:55:13 CreateCoinStake : kernel found 성공
+2018-06-24 13:47:24 CreateCoinStake : kernel found 성공
+> 2
+
+2018-06-25 07:12:26 CreateCoinStake : kernel found 성공
+2018-06-25 07:57:27 CreateCoinStake : kernel found 성공
+2018-06-25 09:10:02 CreateCoinStake : kernel found 실패 timestamp 경쟁
+2018-06-25 09:41:00 CreateCoinStake : kernel found 실패 맥북Air
+	# 오후 7:09 2018-06-25
+	# wallet.cpp 추가
+	# if (GetAdjustedTime() - chainActive.Tip()->GetBlockTime() < 5)
+	#         MilliSleep(15000);
+2018-06-25 10:38:20 CreateCoinStake : kernel found 성공
+2018-06-25 17:49:22 CreateCoinStake : kernel found 성공
+> 4
+
