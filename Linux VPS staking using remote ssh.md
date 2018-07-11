@@ -64,7 +64,8 @@ externalip=insert_vps_public_ip
 ./pivx-cli encryptwallet testpass
 
 ssh root@49.247.205.35 "~/pivx-3.1.0/bin/pivx-cli getinfo"
-ssh root@49.247.205.35 "~/pivx-3.1.0/bin/pivx-cli walletpassphrase testpass 9999999999 false"
+ssh root@49.247.205.35 "~/pivx-3.1.0/bin/pivx-cli walletpassphrase testpass 9999999999 true"
+> 스테이킹 전용 모드
 ssh root@49.247.205.35 "~/pivx-3.1.0/bin/pivx-cli getzerocoinbalance"
 ssh root@49.247.205.35 "~/pivx-3.1.0/bin/pivx-cli getstakingstatus"
 ```
